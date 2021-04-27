@@ -1,0 +1,18 @@
+@mixin adaptivFontSize($maxwidth, $pcFontSize, $mbFontSize) {
+  $addSize: $pcFontSize - $mbFontSize;
+  $addMobSize: $addSize + $addSize * 0.7;
+  @media (max-width: 768+px) {
+    font-size: calc(#{$mbFontSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$maxwidth}));
+  }
+  @media (min-width: 768px) {
+    font-size: calc(#{$mbFontSize + px} + #{$addSize} * (100vw / #{$maxwidth}));
+  }
+}
+
+html {
+  @include adaptivFontSize(1920, 10, 8);
+}
+
+body {
+  font-size: 1.6rem;
+}
