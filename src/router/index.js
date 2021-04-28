@@ -46,11 +46,6 @@ const routes = [
     component: () => import(/* webpackChunkName: "logo" */ '../views/BriefLogo.vue')
   },
   {
-    path: '/illustration',
-    name: 'Illustration',
-    component: () => import(/* webpackChunkName: "illustration" */ '../views/BriefIllustration.vue')
-  },
-  {
     path: '/identity',
     name: 'Identity',
     component: () => import(/* webpackChunkName: "identity" */ '../views/BriefIdentity.vue')
