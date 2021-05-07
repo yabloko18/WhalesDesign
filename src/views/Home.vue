@@ -1,3 +1,4 @@
+<script src="../store/index.js"></script>
 <template>
   <main class="content">
     <section class="slider">

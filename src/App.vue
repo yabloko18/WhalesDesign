@@ -20,6 +20,9 @@ export default {
     portfolio () {
       return this.$store.getters.portfolio
     }
+  },
+  mounted() {
+    document.querySelector("body").classList.remove('load')
   }
 }
 </script>
